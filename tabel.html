@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tabel.css">
+  <title>Dashboard Manajemen Tugas</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h1>HomeworkExchange</h1>
+      <h4>Prioritize, Organize, and Achieve</h4>
+      <ul>
+        <li class="active"><a href="https://renonovriansyah.github.io/tabeltugas" target="_blank">Dashboard</a></li>
+        <li><a href="https://renonovriansyah.github.io/homeworkexchange" target="_blank">Kembali</a></li>
+        <li><a href="">Pengaturan</a></li>
+        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=renonovriansyah9@gmail.com" target="_blank">Bantuan</a></li>
+      </ul>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <h1>Task Management</h1>
+        <button id="addTaskBtn">+ Tambah Tugas</button>
+      </div>
+
+      <!-- Tabel -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nama Tugas</th>
+              <th>Tenggat Waktu</th>
+              <th>Jenis</th>
+              <th>Sisa Waktu</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="taskTableBody">
+            <!-- Baris akan dibuat secara dinamis -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Tambah Tugas</h2>
+      <form id="taskForm">
+        <label for="taskName">Nama Tugas</label>
+        <input type="text" id="taskName" name="taskName" required>
+
+        <label for="deadline">Tenggat Waktu</label>
+        <input type="date" id="deadline" name="deadline" required>
+
+        <label for="taskType">Jenis</label>
+        <select id="taskType" name="taskType">
+          <option value="Pribadi">Pribadi</option>
+          <option value="Kelompok">Kelompok</option>
+        </select>
+
+        <label for="status">Status</label>
+        <select id="status" name="status">
+          <option value="Belum Dikerjakan">Belum Dikerjakan</option>
+          <option value="Sedang Dikerjakan">Sedang Dikerjakan</option>
+          <option value="Sudah Dikerjakan">Sudah Dikerjakan</option>
+        </select>
+
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="tabel.js"></script>
+</body>
+</html>
